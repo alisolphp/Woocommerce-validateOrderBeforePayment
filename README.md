@@ -10,11 +10,11 @@ As WC filters such as "woocommerce_new_order" and "woocommerce_bacs_process_paym
 
 ## How to use:
 - Upload "validateOrderBeforePayment.php" file into your theme directory then Require it inside your theme "functions.php" file or require it inside your custom plugin:
-```
+```php
   require_once __DIR__."/validateOrderBeforePayment.php";
 ```
 - Add this code to your theme "cart/cart.php" file before the "wc_print_notices();" line:
-```
+```php
   if( isset($_GET['pleaseMakeNewOrder']) ){
     wc_add_notice( 'Your Custom Notice Text', 'error' );
   }
