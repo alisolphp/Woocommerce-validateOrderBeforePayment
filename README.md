@@ -6,10 +6,10 @@ This is a band-aid solution for woocommerce sites that have occasional orders wi
 - duplicated shipping items,
 - or WC shipping line item cost is not equal to postmeta shipping cost.
 
-As WC filters such as "woocommerce_new_order" and "woocommerce_bacs_process_payment_order_status" don't cover all payment methods (such as bacs), I decided to call my valitor function on "/checkout/order-pay/" URL.
+As WC filters such as "woocommerce_new_order" and "woocommerce_bacs_process_payment_order_status" don't cover all payment methods (such as bacs), I decided to call my validator function on "/checkout/order-pay/" URL.
 
 ## How to use:
-- Upload "validateOrderBeforePayment.php" file into your theme directory then Require it inside your theme "functions.php" file or require it inside your custom plugin:
+- Upload the "validateOrderBeforePayment.php" file into your theme directory then Require it inside your theme "functions.php" file or require it inside your custom plugin:
 ```php
   require_once __DIR__."/validateOrderBeforePayment.php";
 ```
