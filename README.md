@@ -8,4 +8,11 @@ This is a band-aid solution for woocommerce sites that have occasional orders wi
 
 As WC filters such as "woocommerce_new_order" and "woocommerce_bacs_process_payment_order_status" don't cover all payment methods (such as bacs), I decided to call my valitor function on "/checkout/order-pay/" URL.
 
+## How to use:
+- Require "validateOrderBeforePayment.php" file inside your theme "functions.php" file or require it inside your custom plugin.
+- Add this code to your theme "cart/cart.php" file before the "wc_print_notices();" line:
+  if( isset($_GET['pleaseMakeNewOrder']) ){
+    wc_add_notice( 'Your Custom Notice Text', 'error' );
+  }
+
 I hope it helps you solve this mysterious woocommerce issue.
